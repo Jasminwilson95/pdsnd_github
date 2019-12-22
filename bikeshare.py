@@ -186,6 +186,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 def age(year):
+	"""This function gives the age of the customer"""
     return(int((pd.datetime.now().year)-year))
 
 def user_stats(df,city):
