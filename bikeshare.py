@@ -22,8 +22,8 @@ def get_filters():
         print ("\nWhoops! You entered an incorrect city... Please choose one from chicago, new york city, washington\n")
         city = input("\nPlease input the city you want the data for: ").lower()
         
-    filter_1=input("\nAwesome! Thank you. Now, Would you like to filter by month or day or all? \n").lower()
-    if (filter_1=='month'):
+    filter_option=input("\nAwesome! Thank you. Now, Would you like to filter by month or day or all? \n").lower()
+    if (filter_option=='month'):
     # TO DO: get user input for month (all, january, february, ... , june)
         month = input("\nAlrighty then! Let's get you data by month:  ").lower()
         months=['january','february','march','april','may','june']
@@ -31,14 +31,14 @@ def get_filters():
         while (month not in months):
             print ("\nWhoops! You entered a month we have no data about... Please choose from Jan-June: ")
             month = input("\nPlease enter the month").lower()
-    elif (filter_1=='day'):
+    elif (filter_option=='day'):
         day = input("\nAlrighty then! Let's get you data by day of week: ").lower()
         days_of_week=['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
         month='all'
         while (day not in days_of_week):
             print ("\nWhoops! Looks like there's a mistake. ")
             day = input("\nPlease enter a day of week: ").lower()
-    elif (filter_1=='all'):
+    elif (filter_option=='all'):
         month = input("\nSure. We will filter by both.Please enter a month between Jan-June: ").lower()
         months=['january','february','march','april','may','june']
         while (month not in months):
@@ -217,6 +217,7 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 def display_data(df):
+	 """Displays individual data"""
     individual_data = input('\nWould you like to see individual data? Enter yes or no.\n')
     start=0
     end=5
