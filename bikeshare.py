@@ -217,6 +217,7 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 def display_data(df):
+	 """Displays individual data"""
     individual_data = input('\nWould you like to see individual data? Enter yes or no.\n')
     start=0
     end=5
