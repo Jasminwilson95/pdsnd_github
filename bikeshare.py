@@ -209,7 +209,7 @@ def user_stats(df,city):
         oldest_age=age(df['Birth Year'].min())
         youngest_age=age(df['Birth Year'].max())
         average_age=age(df['Birth Year'].mean())
-        common_birth_year=int(df['Birth Year'].mode().max())
+        common_birth_year=int(df['Birth Year'].value_counts().max())
         print("Oldest User is {}".format(oldest_age))
         print("Youngest User is {}".format(youngest_age))
         print("Average age of Users is {}".format(average_age))
